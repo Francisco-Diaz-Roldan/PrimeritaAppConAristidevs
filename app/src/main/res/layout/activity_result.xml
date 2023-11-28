@@ -6,13 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".firstapp.ResultActivity">
 
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Esto es un ejemplo"
-        android:textSize="35sp"
-        android:layout_gravity="center"
-        android:textColor="@color/green_200"/>
+    <!-- LinearLayout envolviendo TextView y Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esto es un ejemplo"
+            android:textSize="35sp"
+            android:textColor="@color/green_200"/>
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:text="@string/volver"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </LinearLayout>
 
 </FrameLayout>
+
