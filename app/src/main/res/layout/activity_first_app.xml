@@ -23,38 +23,52 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="264dp"
+        android:layout_marginTop="40dp"
         android:text="Pulsame"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/vista2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etName"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="4dp"
         android:maxLines="1"
         android:singleLine="true"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnStart"
         app:layout_constraintEnd_toEndOf="@+id/btnStart"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="@+id/btnStart"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
-        app:layout_constraintVertical_bias="0.25"
         tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnVolver"
+        android:layout_width="125dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/title_text"
+        android:text="@string/volver"
+        app:layout_constraintBottom_toTopOf="@+id/vista4"
+        app:layout_constraintEnd_toEndOf="@+id/vista1"
+        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart"
+        app:layout_constraintVertical_bias="0.214" />
 
     <View
         android:id="@+id/vista1"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -66,21 +80,61 @@
 
     <View
         android:id="@+id/vista2"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
         android:background="@color/green_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
         tools:ignore="MissingConstraints" />
 
+    <View
+        android:id="@+id/vista3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_component_selected"
+        app:layout_constraintBottom_toTopOf="@+id/vista2"
+        app:layout_constraintEnd_toStartOf="@+id/vista2"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/vista4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sobrepeso"
+        app:layout_constraintBottom_toTopOf="@+id/vista5"
+        app:layout_constraintEnd_toEndOf="@+id/vista1"
+        app:layout_constraintStart_toStartOf="@+id/vista3"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/vista5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/vista2"
+        app:layout_constraintEnd_toEndOf="@+id/vista2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/vista2"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

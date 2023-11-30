@@ -1,17 +1,21 @@
 package com.example.primeritaappconaristidevs.firstapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import com.example.primeritaappconaristidevs.R
 
 class FirstAppActivity : AppCompatActivity() {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_app)
         val btnStart = findViewById<AppCompatButton>(R.id.btnStart)
+        val btnVolver = findViewById<AppCompatButton>(R.id.btnVolver)
         val etName = findViewById<AppCompatEditText>(R.id.etName)
 
 
@@ -24,6 +28,11 @@ class FirstAppActivity : AppCompatActivity() {
                 intent.putExtra("EXTRA_NAME", name)
                 startActivity(intent)
             }
+        }
+
+        btnVolver.setOnClickListener{
+            val intent = Intent (this, MenuActivity::class.java )
+            startActivity(intent)
         }
         //Al iniciar la pantalla
     }
