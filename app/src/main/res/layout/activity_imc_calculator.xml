@@ -23,7 +23,7 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center "
+            android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
@@ -58,7 +58,7 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center "
+            android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
@@ -257,15 +257,60 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/btnCalculate"
-        android:text="@string/calculate"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewWeight"
+        tools:ignore="MissingConstraints">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="vertical"
+>
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="120dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="16dp"
+                    android:text="@string/calculate"
+                    app:backgroundTint="@color/background_fab"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewAge"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <Button
+                    android:id="@+id/btnVolver"
+                    android:layout_width="120dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="16dp"
+                    android:text="@string/volver"
+                    app:backgroundTint="@color/title_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewWeight"
+                    app:layout_constraintVertical_bias="0.8" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.example.primeritaappconaristidevs.R
+import com.example.primeritaappconaristidevs.firstapp.MenuActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
 import java.text.DecimalFormat
@@ -32,6 +33,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private lateinit var btnSubstractAge: FloatingActionButton
     private lateinit var btnPlusAge: FloatingActionButton
     private lateinit var btnCalculate:Button
+    private lateinit var btnVolver:Button
 
     companion object{//Declaro una constante dentro del companion object, accesible desde otras clases
         const val IMC_KEY = "IMC_RESULT"
@@ -57,6 +59,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
         btnPlusAge = findViewById(R.id.btnPlusAge)
         tvAge = findViewById(R.id.tvAge)
         btnCalculate = findViewById(R.id.btnCalculate)
+        btnVolver = findViewById(R.id.btnVolver)
     }
 
     private fun initListeners() {
@@ -99,6 +102,10 @@ class ImcCalculatorActivity : AppCompatActivity() {
         btnCalculate.setOnClickListener(){
             val result = calculateIMC()
             navigateToResult(result)
+        }
+        btnVolver.setOnClickListener{
+            val intent = Intent (this, MenuActivity::class.java )
+            startActivity(intent)
         }
 
     }
